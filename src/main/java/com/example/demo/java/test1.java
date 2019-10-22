@@ -1,12 +1,14 @@
 package com.example.demo.java;
 
-public class test {
+public class test1 {
+
 
     public static void main(String[] args){
 
-        System.out.println("push branch to remote repository");
+        System.out.println("test cherry pick");
 
 
 
     }
+
 }
