@@ -1,0 +1,71 @@
+spring:
+  application:
+    name: air-ticket-service-nw
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/fun?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: admin@123
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#  rocketmq:
+#    nameServer: 120.79.190.9:9876
+#    producer:
+#      group: air-ticket-service-report
+#    spout:
+#      consumer:
+#        group: rocketmq-storm-test
+#      ordered: false
+#      topic:
+#        name: rocketmq-storm-test
+#        tag: report
+server:
+  port: 9999
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:9000/eureka/
+
+#
+#mybatis:
+#  basepackage: com.air.ticket.dao.client
+#  xmlLocation: classpath*:com/air/ticket/dao/sqlmap/**/*.xml
+#  typeAliasesPackage: com.air.ticket.dao.model
+
+
+#table:
+#  filter:
+#    excludeMapper: AirPortMapper.*, [a-zA-z0-9]*.*Callback,RegionMapper.*
+#
+#
+#feign:
+#  hystrix:
+#    enabled: true
+
+
+#####################################################################################################
+#spring boot health config
+#management:
+#  security:
+#    enabled: false
+#endpoints:
+#  health:
+#    sensitive: false
+#####################################################################################################
+
+
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 50000
+#          strategy: SEMAPHORE
+
